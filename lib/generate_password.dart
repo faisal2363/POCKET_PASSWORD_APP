@@ -27,4 +27,16 @@ class _GeneratePasswordState extends State<GeneratePassword> {
   automaticallyImplyLeading: false,
   backgroundColor: Colors.teal,
   title: Text('Create Simple Password'),
+  ),body: Container(
+  padding: EdgeInsets.all(32),
+  child: Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+  Row(
+  children: [
+  Text("Create Simple Password",style: TextStyle(color: Colors.white,
+  fontSize: 18, fontWeight: FontWeight.bold
+  ),),
+  ],
   ),
