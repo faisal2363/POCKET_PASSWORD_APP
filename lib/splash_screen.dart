@@ -77,4 +77,6 @@ class VideoState extends State<Splash> with SingleTickerProviderStateMixin{
       ),
     );
   }
+
+  GeneratePassword() {}
 }
