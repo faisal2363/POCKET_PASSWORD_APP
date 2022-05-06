@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_generate_strong_random/custom.dart';
+import 'package:untitled20/custom.dart';
 
 class GeneratePassword extends StatefulWidget {
   @override
@@ -88,4 +88,7 @@ class _GeneratePasswordState extends State<GeneratePassword> {
   }
 
 
+}
+
+generatePassword() {
 }
