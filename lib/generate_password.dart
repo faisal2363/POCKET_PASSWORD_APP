@@ -73,3 +73,19 @@ class _GeneratePasswordState extends State<GeneratePassword> {
 
       ),
       );
+
+  Widget buildButtonWidget() {
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            primary: Colors.black
+        ),
+        onPressed: (){
+          final password = generatePassword();
+          _controller.text = password;
+        },
+        child: Text("Password Generate",style: TextStyle(color: Colors.brown),)
+    );
+  }
+
+
+}
