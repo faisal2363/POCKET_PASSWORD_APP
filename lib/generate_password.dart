@@ -39,4 +39,37 @@ class _GeneratePasswordState extends State<GeneratePassword> {
   fontSize: 18, fontWeight: FontWeight.bold
   ),),
   ],
+  ), SizedBox(height: 15,),
+    TextFormField(
+      controller: _controller,
+      readOnly: true,
+      enableInteractiveSelection: false,
+      decoration: InputDecoration(
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.indigoAccent,),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.indigoAccent),
+          ),
+          suffixIcon: IconButton(
+              onPressed: (){
+                final data = ClipboardData(text: _controller.text);
+                Clipboard.setData(data);
+
+                final snackbar = SnackBar(
+                    content: Text("Password Copy"));
+
+                ScaffoldMessenger.of(context)
+                  ..removeCurrentSnackBar()
+                  ..showSnackBar(snackbar);
+              },
+              icon: Icon(Icons.copy))
+      ),
+    ),
+    SizedBox(height: 15,),
+    buildButtonWidget()
+  ],
   ),
+
+      ),
+      );
