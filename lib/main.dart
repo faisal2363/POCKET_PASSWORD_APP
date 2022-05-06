@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled20/generate_password.dart';
-import 'package:flutter_generate_strong_random/splash_screen.dart';
+import 'package:untitled20/splash_screen.dart';
 
 
 void main() {
