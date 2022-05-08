@@ -31,24 +31,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _textEditingController = TextEditingController();
 
 
-  double _sliderValue = 5;
-  bool _switchValue = false;
-  int _rnd = 0;
-
-  void _generatePassword() {
-    _rnd = randomBetween(5, 20);
-    _textEditingController.text = randomAlphaNumeric(_sliderValue.round());
-    if (_switchValue) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: const Text(
-          'Copied \☺',
-        ),
-        backgroundColor: Colors.black45.withOpacity(0.4),
-        duration: const Duration(seconds: 2),
-      ));
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
