@@ -18,7 +18,7 @@ class VideoState extends State<Splash> with SingleTickerProviderStateMixin{
   late Animation<double> animation;
 
   startTime() async {
-    var _duration = new Duration(seconds: 08);
+    var _duration = new Duration(seconds: 02);
     return new Timer(_duration, navigationPage);
   }
 
@@ -77,6 +77,4 @@ class VideoState extends State<Splash> with SingleTickerProviderStateMixin{
       ),
     );
   }
-
-  GeneratePassword() {}
 }

@@ -1,19 +1,22 @@
 import 'package:clipboard/clipboard.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:random_string/random_string.dart';
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+
+
+
+class extra extends StatelessWidget {
+  const extra({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Genio',
+      title: 'Geno',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.amber,
+
       ),
       home: const MyHomePage(),
     );
@@ -33,10 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   double _sliderValue = 5;
   bool _switchValue = false;
-  int _rnd = 0;
 
   void _generatePassword() {
-    _rnd = randomBetween(5, 20);
     _textEditingController.text = randomAlphaNumeric(_sliderValue.round());
     if (_switchValue) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -52,6 +53,38 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.brown,
+      appBar:  AppBar(
+        title: Text('Create Tough Password'),
+        centerTitle: true,
+        leading: GestureDetector(
+          onTap: () { /* Write listener code here */ },
+          child: Icon(
+            Icons.menu,  // add custom icons also
+          ),
+        ),
+        actions: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {},
+                child: Icon(
+                  Icons.search,
+                  size: 26.0,
+                ),
+              )
+          ),
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {},
+                child: Icon(
+                    Icons.more_vert
+                ),
+              )
+          ),
+        ],
+      ),
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -61,6 +94,33 @@ class _MyHomePageState extends State<MyHomePage> {
             //   width: 320,
             //   child: AdWidget(ad: _topAdBanner),
             // ),
+            Row(
+              children: [
+                Text("FaceBook",
+                  style: TextStyle(color: Colors.white,
+                      fontSize: 32, fontWeight: FontWeight.bold
+                  ),),
+              ],
+            ),
+            TextField(
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white,),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                ),
+                hintText: 'Enter your name',
+              ),
+            ),
+            Row(
+              children: [
+                Text("TOUGH    password:",
+                  style: TextStyle(color: Colors.white,
+                      fontSize: 18, fontWeight: FontWeight.bold
+                  ),),
+              ],
+            ),
             const SizedBox(
               height: 100,
             ),
@@ -77,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.2),
-                    hintText: "Your password:",
+                    hintText: "TOUGH password:",
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8))),
               ),
@@ -134,9 +194,9 @@ class _MyHomePageState extends State<MyHomePage> {
             gradient: LinearGradient(
               //  colors: [Colors.pink, Colors.red, Colors.orange],
                 colors: [
-                  Colors.greenAccent,
+                  Colors.amber,
                   Colors.blue,
-                  Colors.blueAccent,
+                  Colors.brown,
                 ], begin: Alignment.bottomLeft, end: Alignment.topRight)),
       ),
     );
@@ -151,6 +211,7 @@ class _MyElevatedButton extends StatelessWidget {
   const _MyElevatedButton(
       {Key? key, required this.callback, required this.text})
       : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
