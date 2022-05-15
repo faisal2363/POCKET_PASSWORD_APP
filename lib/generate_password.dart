@@ -28,9 +28,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
           title: Text('Create Simple Password'),
           centerTitle: true,
           leading: GestureDetector(
-            onTap: () { /* Write listener code here */ },
+            onTap: () {
+              /* Write listener code here */
+            },
             child: Icon(
-              Icons.menu,  // add custom icons also
+              Icons.menu, // add custom icons also
             ),
           ),
           actions: <Widget>[
@@ -97,7 +99,7 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                 enableInteractiveSelection: false,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white,),
+                      borderSide: BorderSide(color: Colors.black,),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.white),
@@ -114,17 +116,20 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                             ..removeCurrentSnackBar()
                             ..showSnackBar(snackbar);
                         },
-                        icon: Icon(Icons.copy,color: Colors.white))
+                        icon: Icon(Icons.copy, color: Colors.white))
                 ),
               ),
               SizedBox(height: 15,),
               buildButtonWidget(),
+              buildButtonWidget4(),
               buildButtonWidget1(),
+
             ],
           ),
 
         ),
       );
+
   // <-- SEE HERE
   Widget buildButtonWidget() {
     return ElevatedButton(
@@ -143,6 +148,22 @@ class _GeneratePasswordState extends State<GeneratePassword> {
       ),
     );
   }
+
+  Widget buildButtonWidget4() {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: Colors.amber,
+        onPrimary: Colors.black,
+        side: BorderSide(color: Colors.white, width: 5),
+      ),
+      onPressed: () {},
+      child: const Text(
+        'Save',
+        style: TextStyle(fontSize: 40),
+      ),
+    );
+  }
+
   Widget buildButtonWidget1() {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
@@ -155,8 +176,6 @@ class _GeneratePasswordState extends State<GeneratePassword> {
           context,
           MaterialPageRoute(builder: (context) => extra()),
         );
-
-
       },
 
       child: const Text(
@@ -164,8 +183,6 @@ class _GeneratePasswordState extends State<GeneratePassword> {
         style: TextStyle(fontSize: 40),
       ),
     );
-
-
   }
 
 }

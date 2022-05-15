@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957742734828",
+    "project_id": "pocketpassword-app",
+    "storage_bucket": "pocketpassword-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957742734828:android:e4c6bcdadf06a3bff034c9",
+        "android_client_info": {
+          "package_name": "com.example.untitled20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957742734828-9hh4kep0ildaje8m19g4537vbv2ena5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbAfbZgxyHd70ERrTQVn3npZUUMHTzkWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957742734828-9hh4kep0ildaje8m19g4537vbv2ena5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
